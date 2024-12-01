@@ -1,5 +1,5 @@
 // Mot de passe pour accéder au site
-const correctPassword = "Gaufres"; // Le mot de passe est "Gaufres"
+const correctPassword = "Gaufres"; 
 // Éléments HTML
 const passwordScreen = document.getElementById("password-screen");
 const content = document.getElementById("content");
@@ -33,3 +33,37 @@ menuLinks.forEach((link) => {
        document.getElementById(targetSection).style.display = "block";
    });
 });
+function createHearts() {
+   // Crée le conteneur de cœurs s'il n'existe pas
+   let heartsContainer = document.querySelector('.hearts-container');
+   if (!heartsContainer) {
+       heartsContainer = document.createElement('div');
+       heartsContainer.classList.add('hearts-container');
+       document.body.appendChild(heartsContainer); // Ajoute à <body> pour être global
+   }
+   // Crée des cœurs à intervalle régulier
+   setInterval(() => {
+       const heart = document.createElement('div');
+       heart.classList.add('heart');
+       heart.style.left = `${Math.random() * 100}vw`; // Position horizontale aléatoire
+       heart.style.animationDuration = `${Math.random() * 3 + 2}s`; // Durée aléatoire
+       heartsContainer.appendChild(heart);
+       // Supprime le cœur une fois l'animation terminée
+       setTimeout(() => {
+           heart.remove();
+       }, 5000);
+   }, 300); // Ajoute un nouveau cœur toutes les 300ms
+}
+// Lancer la création des cœurs une fois que le DOM est chargé
+document.addEventListener('DOMContentLoaded', createHearts);
+
+function showSection(sectionId) {
+   const sections = document.querySelectorAll('.section');
+   sections.forEach(section => {
+       section.classList.remove('active');
+   });
+   const targetSection = document.getElementById(sectionId);
+   if (targetSection) {
+       targetSection.classList.add('active');
+   }
+}
