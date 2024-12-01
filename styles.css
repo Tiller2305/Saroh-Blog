@@ -1,0 +1,88 @@
+#sarah {
+   padding: 20px;
+   text-align: center;
+}
+#sarah img {
+   border-radius: 10px;
+   margin-bottom: 20px;
+}#sarah {
+   padding: 20px;
+   text-align: center;
+}
+#sarah img {
+   border-radius: 10px;
+   margin-bottom: 20px;
+}#sarah {
+   padding: 20px;
+   text-align: center;
+}
+#sarah img {
+   border-radius: 10px;
+   margin-bottom: 20px;
+}/* Styles de base */
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f4f4f4;
+   color: #333;
+}
+header {
+   background-color: purple;
+   color: white;
+   text-align: center;
+   padding: 1em;
+}
+nav a {
+   color: yellow;
+   margin: 0 10px;
+   text-decoration: none;
+}
+aside {
+   width: 20%;
+   float: left;
+   background-color: black;
+   color: white;
+   padding: 10px;
+   height: 100%;
+}
+aside ul {
+   list-style: none;
+   padding: 0;
+}
+aside ul li {
+   margin: 10px 0;
+}
+aside ul li a {
+   color: lightblue;
+   text-decoration: none;
+}
+main {
+   margin-left: 22%;
+   padding: 20px;
+   background-color: #d0f0c0;
+   border-radius: 10px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+footer {
+   clear: both;
+   text-align: center;
+   padding: 1em;
+   background-color: black;
+   color: white;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+}
+section {
+   display: none;
+}
+/* Affiche une section active */
+.section.active {
+   display: block;
+}
+/* Écran de mot de passe */
+#password-screen {
+   text-align: center;
+   margin-top: 20%;
+}

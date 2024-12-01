@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarah Juice Blog</title>
+<style>
+<link rel="stylesheet" href="styles.css">
+       /* Global styling */
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #000000;
+           color: #FFFFFF;
+           margin: 0;
+           padding: 0;
+       }
+       h1, h2 {
+           text-transform: uppercase;
+           text-align: center;
+       }
+       /* Navigation bar styling */
+       .navbar {
+           display: flex;
+           justify-content: center;
+           background-color: #333;
+           padding: 10px;
+           position: sticky;
+           top: 0;
+           z-index: 1000;
+       }
+       .navbar a {
+           color: white;
+           text-decoration: none;
+           padding: 10px 20px;
+           margin: 0 10px;
+           border-radius: 5px;
+       }
+       .navbar a:hover {
+           background-color: #555;
+       }
+       /* Section styling */
+       .section {
+           display: none;
+           text-align: center;
+           padding: 20px;
+       }
+       .section img {
+           max-width: 80%;
+           height: auto;
+           margin: 20px 0;
+           border: 3px solid #ffffff;
+           border-radius: 10px;
+       }
+       .section.active {
+           display: block;
+       }
+       /* Password screen styling */
+       #password-screen {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           height: 100vh;
+           background-color: #222;
+           color: #fff;
+           text-align: center;
+       }
+       #password-screen input {
+           margin: 10px;
+           padding: 10px;
+           font-size: 16px;
+       }
+       #password-screen button {
+           padding: 10px 20px;
+           font-size: 16px;
+           background-color: #444;
+           color: #fff;
+           border: none;
+           cursor: pointer;
+       }
+       #password-screen button:hover {
+           background-color: #666;
+       }
+</style>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+       // Mot de passe validation
+       function checkPassword() {
+           const password = document.getElementById('password-input').value;
+           if (password === "Gaufres") {
+               document.getElementById('password-screen').style.display = 'none';
+               document.getElementById('main-content').style.display = 'block';
+           } else {
+               alert("Mot de passe incorrect !");
+           }
+       }
+       // Navigation entre les sections
+       function showSection(sectionId) {
+           const sections = document.querySelectorAll('.section');
+           sections.forEach(section => {
+               section.classList.remove('active');
+           });
+           const targetSection = document.getElementById(sectionId);
+           targetSection.classList.add('active');
+       }
+</script><link rel="stylesheet" href="styles.css">
+</head><script src="script.js" defer></script>
+<body>
+<!-- Écran de mot de passe -->
+<div id="password-screen">
+<h1>Bienvenue sur le Blog Fan de Sarah Juice </h1>
+<p>Entrez le mot de passe pour accéder au site.</p>
+<input type="password" id="password-input" placeholder="Entrez le mot de passe">
+<button onclick="checkPassword()">Valider</button>
+<p>Indice : Qu’est-ce que Saroh adore manger ?</p>
+</div>
+<!-- Contenu principal -->
+<div id="main-content" style="display: none;">
+<!-- Menu de navigation -->
+<div class="navbar">
+<a href="javascript:void(0);" onclick="showSection('about-sarah')">All About Sarah</a>
+<a href="javascript:void(0);" onclick="showSection('sarah')">Sarah</a>
+</div>
+<!-- Section "All About Sarah" -->
+<div id="about-sarah" class="section active">
+<h1>All About Sarah</h1>
+<img src="Rose Vert Retro Y2K Portrait Publication Instagram.png.png" width="819" height="1024" alt="All About Sarah">
+<p>
+              Prénom : Sarah<br>
+	
+			  Nom : Juice<br>
+	
+			  Date de Naissaince : 03/2005<br>
+	
+			  Signe Astro : Poisson<br>
+	
+			  Centre d'intêret : La musique, L'art, La mode,Les films, Les animes/mangas,SNK, Ghibli, Tim burton, L'horreur, Coraline, etc<br>
+	
+			  Groupe Préféré : QUEEN<br>
+	
+			  Crush : Roger Taylor, Ademo, Bishop8, Rihanna.<br>
+	
+			  Péché Mignon : Les Gaufres.<br>
+	<p></p>
+	
+	<p> Pour moi Sarah est une des personnes les plus incroyable sur terre. </p>
+	
+	Saroh c'est la plus forte. En plus d'être une femme ce qui est déjà extrêmment difficile et nul(tu sais le misogyne) elle assure la propreté de sa maison depuis son plus jeune âge, c'est une soeur et une enfant incroyable, quand son père à besoin d'elle au bar elle ne refuse jamais, alors qu'elle s'occupe aussi de la maison et de son petit frère bordelique.
+	<p></p>
+"c'est la meilleure des grandes soeurs " c'est ce que ma dit son petit frère quand je l'ai interviewvé.<br>
+	<br>
+	Il ma dit être heureux de l'avoir dans sa vie sinon ça vie serait nul puis il est retourné jouer à fifa.
+	Ma vie aussi serait nul sans Saroh, je veux dire, je vivais trèsbien avant elle mais depuis qu'elle y ai c'est comme ci les couleurs étaient encore plus jolies.
+	En parlant de choses Jolie, Saroh est incroyablement belle il faudrait qu'elle prenne plus confiance en elle,même sur ses outfits, tout les outfits qu'elle se fait lui vont super bien peu importe le styles cette meuf est incroyable.
+	
+	elle a des fan mais elle le sait pas après tant mieux parce qu'elle prendrai trop la grosse tête.<br>
+	Je crois que je suis fan d'elle aussi (je dis je crois alors que je crée un site fan d'elle ptdrrrr), mais en vrai comment ne pas être fan, la meuf joue du saxophone, elle dessine trop bien, elle est comédienne, photographe, créative, trop stylé et j'en passe (y'a tellement de chose à dire sur elle qu'il faudrait en faire un roman de 2000 pages). Vous avez compris Sarah est incroyable et si vous la connaissez pas encore et bah dans quelques années vous la connaitrez parce que tout le monde la connaitras car ce sera une putain de star et que tout lui réussiras. (J'ai oublié de parler de son combat quotidien avec son estomac mais bon vous avez compris elle est génial ma meilleure copine et elle va vaincre ce truc de merde très bientôt). bon je me suis emmêlé j'ai vraiment écris de manière spontané, 
+	<p></p>
+	jsp comment cela va rendre sur le site mais on s'amuse. <br>
+	
+	
+    <img src="melon_pan_3.gif" width="400" height="224" alt=""All About Sarah"> </p>
+																			  
+<p>Saroh c'est ça:<p/>
+  <img src="The Doll _ Gif __ Coraline __ By Henriscavills (Tumblr).gif" width="540" height="300" alt=All About Sarah"> </p>
+	
+	<img src="photofunky.gif" width="500" height="168" alt="All About Sarah"> </p>
+	
+	<img src="Les Noces Funebres.gif" width="470" height="267" alt="All About Sarah"> </p>
+	
+	<img src="Les Meilleurs Series.gif" width="540" height="540" alt="All About Sarah">
+	
+	
+	
+<p>Mais Saroh c'est aussi ça:<p/>
+<img src="Gon and Killua.gif" width="634" height="319" alt="All About Sarah">
+<img src="Projets Artistiques.gif" width="400" height="211" alt="All About Sarah">
+<img src="Gifs animados de anime.gif" width="400" height="350" alt="All About Sarah">
+<img src="Hungry GIF - Hungry - Découvrir et partager des GIF.gif" width="498" height="371" alt="All About Sarah">
+<img src="Attaque Of Titan.gif" width="540" height="304" alt="All About Sarah">
+	
+	
+<p> Et ça:<p/>
+	<img src="Myasaki.gif" width="500" height="269" alt="All About Sarah"> </p>
+    <img src="Bureau Dessin.gif" width="500" height="369" alt="All About Sarah"> </p>
+  <img src="anime-music.gif" width="640" height="358" alt="All About Sarah">
+  <img src="Art Sensoriel.gif" width="500" height="375" alt="All About Sarah">
+  <img src="Croquis D'aliments.gif" width="540" height="406" alt="All About Sarah">
+  <img src="Graz.gif" width="500" height="278" alt="All About Sarah">
+
+
+
+
+
+<p> Toutes ces personnalité différentes, toutes plus perché les unes que les autres, toutes cette créativité, cette joie de vivre, cette profondeurs, ces outfits de plus en plus incroyable. Tout ça c'est Saroh et c'est pour ça qu'on l'aime cette gogole.<p/>
+
+<br>
+
+ 
+<img src="Image (2).jpg" width="768" height="1024" alt="All About Sarah">
+<p></p>
+J'ai dis que sont péché mignon c'était les gaufres,mais c'est la bouffe en générale
+REGARDEZ SONT SOURIRE SVP<br>
+JE L'AI JAMAIS VU AUSSI CONTENTE QUE DEVANT DE LA GRAILLE BBBBAAAAHAHAHAHAHAHHAHAHAHAA
+
+<p></p>
+
+
+<p></p>
+
+<br>
+
+
+<br>
+<br>
+<br>
+<p> Bref je vous laisse sur un dernier sourire de Saroh<p/>
+<img src="Image.jpg" width="768" height="1024" alt="All About Sarah">
+
+</p>
+</div>
+
+
+
+<!-- Section "Sarah" -->
+<div id="sarah" class="section active">
+<h2>Sarah</h2>
+<img src="Blue y2k chrome thrift shop instagram post.png" alt="Sarah">
+<p>
+       REGARDEZ COMMENT ELLE EST INCROYABLE MA SAROH <br><br>
+       PROSTERNEZ VOUS DEVANT ELLE BANDE DE DECHETS QUE VOUS ETES<br><br>
+       C'est tout ce que j'arrive à faire l'instant mdr mais j'espère que ça t'aura plu saroh.<br><br>
+       Crève <3.
+</p>
+</div>
