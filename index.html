@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="script.js" defer></script>
+<head>
+<script src="script.js" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sarah Juice Blog</title>
+	</head>	
 <style>
 <link rel="stylesheet" href="styles.css">
+ 
        /* Global styling */
        body {
            font-family: Arial, sans-serif;
@@ -81,8 +84,92 @@
        #password-screen button:hover {
            background-color: #666;
        }
-</style>
+	<style>
+   /* Animation pour les cœurs */
+   @keyframes float-hearts {
+       0% {
+           transform: translateY(100vh) scale(0.5);
+           opacity: 0;
+       }
+       50% {
+           opacity: 1;
+       }
+       100% {
+           transform: translateY(-10vh) scale(1);
+           opacity: 0;
+       }
+   }
+   /* Container for hearts, covering the entire site */
+.hearts-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   pointer-events: none; /* Makes the hearts non-interactive */
+   overflow: hidden;
+   z-index: -1; /* Sends it to the background */
+}
+/* Heart shape */
+.heart {
+   position: absolute;
+   width: 50px; /* Adjust size here */
+   height: 50px; /* Adjust size here */
+   background-color: pink;
+   transform: rotate(-45deg);
+   animation: floatHeart 5s linear infinite, fadeOut 5s ease-out infinite;
+   box-shadow: 0 0 10px rgba(255, 192, 203, 0.6);
+}
+.heart::before,
+.heart::after {
+   content: '';
+   position: absolute;
+   width: 50px; /* Match parent size */
+   height: 50px; /* Match parent size */
+   background-color: pink;
+   border-radius: 50%;
+}
+/* Position the two circles to create the heart shape */
+.heart::before {
+   top: -25px;
+   left: 0;
+}
+.heart::after {
+   top: 0;
+   left: 25px;
+}
+/* Heart animation */
+@keyframes floatHeart {
+   0% {
+       transform: translateY(0) scale(1) rotate(-45deg);
+   }
+   50% {
+       transform: translateY(-200px) scale(1.2) rotate(-45deg);
+   }
+   100% {
+       transform: translateY(-400px) scale(1) rotate(-45deg);
+   }
+}
+@keyframes fadeOut {
+   0% {
+       opacity: 1;
+   }
+   100% {
+       opacity: 0;
+   }
+}
+	
+   /* Génération de plusieurs cœurs */
+   .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+   .heart:nth-child(2) { left: 30%; animation-delay: 1s; }
+   .heart:nth-child(3) { left: 50%; animation-delay: 2s; }
+   .heart:nth-child(4) { left: 70%; animation-delay: 3s; }
+   .heart:nth-child(5) { left: 90%; animation-delay: 4s; }
+   .heart:nth-child(6) { left: 25%; animation-delay: 2.5s; }
+   .heart:nth-child(7) { left: 60%; animation-delay: 1.5s; }
+</style>	
 <link href="styles.css" rel="stylesheet" type="text/css">
+	</head>	
 <script>
        // Mot de passe validation
        function checkPassword() {
@@ -104,8 +191,18 @@
            targetSection.classList.add('active');
        }
 </script><link rel="stylesheet" href="styles.css">
-</head><script src="script.js" defer></script>
+
 <body>
+	<div class="hearts-container"></div>
+<div class="heart"></div>
+<div class="heart"></div>
+<div class="heart"></div>
+<div class="heart"></div>
+<div class="heart"></div>
+<div class="heart"></div>
+<div class="heart"></div>
+</div>
+	
 <!-- Écran de mot de passe -->
 <div id="password-screen">
 <h1>Bienvenue sur le Blog Fan de Sarah Juice </h1>
@@ -114,6 +211,9 @@
 <button onclick="checkPassword()">Valider</button>
 <p>Indice : Qu’est-ce que Saroh adore manger ? (en un seul mot, première lettre en majuscules)</p>
 </div>
+
+</head><script src="script.js" defer></script>	
+</body>
 <!-- Contenu principal -->
 <div id="main-content" style="display: none;">
 <!-- Menu de navigation -->
